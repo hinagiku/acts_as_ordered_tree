@@ -15,8 +15,8 @@ module ActsAsOrderedTree
       Compatibility.version '>= 4.0.0' do
         # Reloads node's attributes related to tree structure
         def reload(options = {})
-          record.association_cache.delete(:parent)
-          record.association_cache.delete(:children)
+          #record.association_cache.delete(:parent)
+          #record.association_cache.delete(:children)
 
           fresh_object = reload_scope(options).find(record.id)
 
